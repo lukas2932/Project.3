@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+html,
+body{
+    margin: 0;
+}
+#box{
+    width :100px;
+    height: 100px;
+    position: relative;
+    background-color: lightblue;
+    left: 10px;
+    transition: 0.2s;
+    top: 10px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+#box p{
+    margin: 0;
+}
+#button{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#enemy{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 90%;
+    top: 10px;  
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+#enemy p{
+    margin: 0;
+}
+#info{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
