@@ -130,6 +130,7 @@ let moneyPro = 0;
 
 let thiefSpeed = 4;
 let thiefSpeedStealButton = 4050;
+let thiefAttackAnimationPro = 15;
 
 
 function stealButtonAppear() {
@@ -208,6 +209,50 @@ function AfterLevel(){
 }
 
 
+function stealButtonDeactive(){
+  stealButton.onmouseover = () => {
+    stealButton.style.color = "white";
+  }
+  stealButton.style.cursor = "none";
+}
+
+
+function stealButtonActivate() {
+  stealButton.onmouseover = () => {
+    stealButton.style.color = "red";
+  }
+  stealButton.onmouseout = () => {
+    stealButton.style.color = "white";
+  }
+  stealButton.style.cursor = "pointer";
+}
+
+
+function thiefAttackAnimation() {
+  enemyImage.onmousedown = () => {
+    thiefAttackAnimationPro += 2;
+    thief.style.left = thiefAttackAnimationPro + "%"
+  }
+
+  enemyImage.onmouseup = () => {
+    thiefAttackAnimationPro -= 2;
+    thief.style.left = thiefAttackAnimationPro + "%";
+  }
+}
+
+function thiefAttackAnimationAfter(){
+  enemyImage.onmousedown = () => {
+    thiefAttackAnimationPro += 0;
+    thief.style.left = thiefAttackAnimationPro + "%"
+  }
+
+  enemyImage.onmouseup = () => {
+    thiefAttackAnimationPro -= 0;
+    thief.style.left = thiefAttackAnimationPro + "%";
+  }
+}
+
+
 function BattleLevelTwo(){
   let enemyDefeatLevelTwoInterval = setInterval(() => {
     if(enemyHealthPro <= 0){
@@ -217,6 +262,8 @@ function BattleLevelTwo(){
         enemyHealthPro -= 0;
         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
       }
+
+      thiefAttackAnimationAfter();
 
       robResult();
       robberyRecieveOne.innerHTML = "Your recieved an item2";
@@ -254,6 +301,8 @@ function BattleLevelThree(){
         enemyHealthPro -= 0;
         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
       }
+
+      thiefAttackAnimationAfter();
 
       robResult();
       robberyRecieveOne.innerHTML = "Your recieved an item3";
@@ -293,6 +342,8 @@ function BattleLevelFour(){
         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
       }
 
+      thiefAttackAnimationAfter();
+
       robResult();
       robberyRecieveOne.innerHTML = "Your recieved an item4";
       itemBoxSix.style.display = "block";
@@ -330,6 +381,8 @@ function BattleLevelFive(){
         enemyHealthPro -= 0;
         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
       }
+
+      thiefAttackAnimationAfter();
 
       robResult();
       robberyRecieveOne.innerHTML = "Your recieved an item4";
@@ -369,6 +422,8 @@ function BattleLevelSix(){
         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
       }
 
+      thiefAttackAnimationAfter();
+
       robResult();
       robberyRecieveOne.innerHTML = "Your recieved an item4";
       itemBoxNine.style.display = "block";
@@ -407,6 +462,8 @@ function BattleLevelSeven(){
         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
       }
 
+      thiefAttackAnimationAfter();
+
       robResult();
       robberyRecieveOne.innerHTML = "Your recieved an item4";
       itemBoxTen.style.display = "block";
@@ -444,6 +501,8 @@ function BattleLevelEight(){
         enemyHealthPro -= 0;
         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
       }
+
+      thiefAttackAnimationAfter();
 
       robResult();
       robberyRecieveOne.innerHTML = "Your recieved an item8";
@@ -585,6 +644,7 @@ levelOne.onclick = () => {
   stealButton.addEventListener('click', () => {
     stealProgress.style.display = "block";
     setTimeout(robResult, 4100);
+    setTimeout(stealButtonDeactive, 4050);
     stealProgress.style.animation =  "steal-progress " + thiefRobAcceleration + "s linear forwards";
     robberyRecieveOne.innerHTML = "You recieved an itemOne";
     itemBoxOne.style.display = "block";
@@ -608,6 +668,7 @@ levelOne.onclick = () => {
     shopBetterShoes.style.display = "block";
     shopMoreHP.style.display = "block";
     shopEnhancedKnife.style.display = "none";
+    stealButtonActivate();
 
 
     levelTwo.onclick = () => {
@@ -644,6 +705,8 @@ levelOne.onclick = () => {
           enemyHealthPro -= thiefAttack;
           enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
         };
+
+        thiefAttackAnimation();
       },{once : true});
 
       backRobberyButton.onclick = () => {
@@ -701,6 +764,8 @@ levelOne.onclick = () => {
               enemyHealthPro -= thiefAttack;
               enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
             };
+
+            thiefAttackAnimation();
           },{once : true});
 
         backRobberyButton.onclick = () => {
@@ -757,6 +822,8 @@ levelOne.onclick = () => {
                 enemyHealthPro -= thiefAttack;
                 enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
               };
+
+              thiefAttackAnimation();
             }, {once : true});
 
           backRobberyButton.onclick = () => {
@@ -813,6 +880,8 @@ levelOne.onclick = () => {
                   enemyHealthPro -= thiefAttack;
                   enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
                 };
+
+                thiefAttackAnimation();
               }, {once : true});
 
               backRobberyButton.onclick = () => {
@@ -870,6 +939,8 @@ levelOne.onclick = () => {
                     enemyHealthPro -= thiefAttack;
                     enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
                  };
+
+                 thiefAttackAnimation();
                 }, {once : true});
 
                 backRobberyButton.onclick = () => {
@@ -927,6 +998,8 @@ levelOne.onclick = () => {
                       enemyHealthPro -= thiefAttack;
                       enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
                     };
+
+                    thiefAttackAnimation();
                   }, {once : true});
 
                   backRobberyButton.onclick = () => {
@@ -976,6 +1049,8 @@ levelOne.onclick = () => {
                         enemyHealthPro -= thiefAttack;
                         enemyHealth.innerHTML = `${"Health: " + enemyHealthPro}`;
                       };
+
+                      thiefAttackAnimation();
                     }, {once : true});
 
                     backRobberyButton.onclick = () => {
