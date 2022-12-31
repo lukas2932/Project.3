@@ -1,45 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
 *{
     box-sizing: border-box;
 }
 html,
 body{
     margin: 0;
+    background: url("/res/img/background.jpg");
+    background-size: cover;
 }
-#box{
-    width :100px;
-    height: 100px;
-    position: relative;
-    background-color: lightblue;
-    left: 10px;
+#main{
+    width: 97.5%;
+    height: 700px;
+    margin-top: 1.25%;
+    margin-left: 1.25%;
+}
+#gameName{
+    font-size: 128px;
+    text-align: center;
+    font-family: 'Zen Dots', cursive;
+}
+#startButton{
+    width: 100%;
+    font-size: 64px;
+    font-family: 'Zen Dots', cursive;
+    text-align: center;
     transition: 0.2s;
-    top: 10px;
+    cursor: pointer;
+    margin-top: 0;
+}
+#buttons{
     display: flex;
-    align-items:flex-end;
-    justify-content: center;
+    margin-top: 20%;
+    justify-content: space-around;
 }
-#box p{
+#levelButton{
+    width: 10%;
+    font-size: 64px;
+    font-family: 'Zen Dots', cursive;
+    transition: 0.2s;
+    cursor: pointer;
     margin: 0;
+    display:none
 }
-#button{
-    margin-top: 20px;
-    margin-left: 10px;
+#shopButton{
+    width: 10%;
+    font-size: 64px;
+    font-family: 'Zen Dots', cursive;
+    transition: 0.2s;
+    cursor: pointer;
+    margin: 0;
+    display: none;
 }
-#enemy{
-    background-color: blue;
+#levels{
+    width: 50%;
+    height: 60%;
+    border: 1px solid black;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: none;
+    overflow: auto;
+}
+#levels p{
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Zen Dots', cursive;
+}
+.levelBox{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color:lightgrey;
+}
+#shop{
+    border: 1px solid black;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: none;
+    overflow: auto;
+}
+#shop p{
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Zen Dots', cursive;
+}
+#temporarly{
+    width: 40%;
+}
+#normal{
+    width: 40%;
+}
+#shopMoreHP{
+    display: none;
+}
+#shopEnhancedKnife{
+    display: none;
+}
+#shopLockpick{
+    display: none;
+}
+#shopKnife{
+    display: none;
+}
+#shopBetterShoes{
+    display: none;
+}
+.box{
+    border: 1px solid black;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    width: 100%;
+}
+.box p{
+    font-size: 16px;
+    margin: 2px;
+}
+.box img{
     width: 100px;
     height: 100px;
-    position: absolute;
-    left: 90%;
-    top: 10px;  
-    display: flex;
-    align-items:flex-end;
-    justify-content: center;
+    align-self: center; 
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-#enemy p{
+.inventoryBox{
+    margin: 10px;
+    border: 1px solid black;
+    height: 100%;
+    width: 200px
+}   
+.startGameButton{
+    position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+    bottom: 10px;
+}
+#levelboxes{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 60%;
+}
+#backButton{
+    width: 2.5%;
+    height: 10%;
+    margin: 10px;
+    margin-top: 0;
+    top: 30px;
+    display: none;
+}
+#backButton img{
+    width: 100%;
+    height: 100%;
+}
+#buyButtonEnhancedKnife,
+#buyButtonKnife,
+#buyButtonShoes,
+#buyButtonMoreHP,
+#buyButtonLockpick{
+    transition: 0.2s;
+    cursor: pointer;
+}
+#money{
+    position: absolute;
+    top: 30px;
+    left: 95%;
+    font-family: 'Zen Dots', cursive;
+    display: none;
+}
+#inventory{
+    font-family: 'Zen Dots', cursive;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5px;
+    font-size: 22px;
+    transition: 0.2s;
+    display: none;
+    align-items: center;
+}
+#inventory p{
     margin: 0;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 10%;
+    margin-left: 45%;
+}
+#inventoryBar{
+    width: 50%;
+    height: 60%;
+    border: 1px solid black;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    overflow: auto;
+    font-family: 'Zen Dots', cursive;
+    display: none;
+}
+#inventoryBar p{
+    text-align: center;
+}
+#inventoryBoxes{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+}
+#itemBoxOne,
+#itemBoxTwo,
+#itemBoxThree,
+#itemBoxFour,
+#itemBoxFive,
+#itemBoxSix,
+#itemBoxSeven,
+#itemBoxEight,
+#itemBoxNine,
+#itemBoxTen,
+#itemBoxElleven,
+#itemBoxTwelve,
+#itemBoxThirdteen{
+    display: none;
+}
+#inventorySellButtonOne{
+    position: relative;
+    top: 50%;
+}
+#inventorySellButtonOne,
+#inventorySellButtonTwo,
+#inventorySellButtonThree,
+#inventorySellButtonFour,
+#inventorySellButtonFive,
+#inventorySellButtonSix,
+#inventorySellButtonSeven,
+#inventorySellButtonEight,
+#inventorySellButtonNine,
+#inventorySellButtonTen,
+#inventorySellButtonElleven,
+#inventorySellButtonTwelve,
+#inventorySellButtonThirdteen{
+    cursor: pointer;
+    transition: 0.2s;
+}
+#inventoryNoItems{
+    align-self: center;
+    margin-left: 50%;
+    width: 100%;
+}
+#thief{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    animation: thief-animation 4s linear forwards;
+    top: 75%;
+    display: none;
+}
+#thiefHealth{
+    font-family: 'Zen Dots', cursive;
+    position: absolute;
+    top: -25px;
+    left: 12%;
+    display: none;
+}
+#thief p{
+    align-self:center;
+}
+#thief img{
+    height: 150px;
+    width: 150px;
+}
+#enemy{
+    border:1px solid black;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75%;
+    left: 80%;
+    display: none;
+}
+#enemyImage{
+    height: 150px;
+    width: 150px;
+}
+#enemyHealth{
+    font-family: 'Zen Dots', cursive;
+    position: absolute;
+    top: -40px;
+    left: 12%;
+    color: white;
+}
+#stealProgress{
+    border: 1px solid black;
+    width: 0;
+    height: 10px;
+    position: absolute; 
+    top: -40px;
+    margin-left: 15%;
+    background-color: red;
+    display: none;
+}
+@keyframes steal-progress{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes thief-animation{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1200px);
+    }
+}
+#car{
+    border: 1px solid black;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    position: absolute;
+    top: 65%;
+    left: 72.5%;
+    display: none;
+}
+#stealButton{
+    position: absolute;
+    align-self: center;
+    top: -40px;
+    left: 60%;
+    color: white;
+    font-family: 'Zen Dots', cursive;
+    cursor: pointer;
+    transition: 0.2s;
+    display: none;
+}
+#robResults{
+    border:1px solid black;
+    width: 25%;
+    height: 60%;
+    left: 37.5%;
+    top: 10%;
+    position: absolute;
+    display: none;
+    font-family: 'Zen Dots', cursive;
+}
+#backRobberyButton{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 75%;
+    transition: 0.2s;
+    cursor: pointer;
 }
 #info{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    font-family: 'Zen Dots', cursive;
+    position: absolute;
+    width: auto;
+    width: 98%;
+    text-align: center;
+    top: 18%;
+}
+#hintButton{
+    font-family: 'Zen Dots', cursive;
+    position: absolute;
+    width: auto;
+    width: 98%;
+    margin-top: 8%;
+    text-align: right;
+    right: 40.2%;
+    cursor: pointer;
+    top: 3.4%;
+}
+#robResults p{
+    text-align: center;
+    margin: 10px;
+}
+#endGameNadpis{
+    position: absolute;
+    font-size: 58px;
+    font-family: 'Zen Dots', cursive;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+    color:white;
+    display: none;
+
+}
+#sandbox{
+    position: absolute;
+    font-family: 'Zen Dots', cursive;
+    font-size: 100px;
+    color: rgba(0,0,0,0.2);
+    width: 100%;
+    text-align: center;
+    top: 125px;
+    display: none;
+    transition: 0.2;
+
+}
+#startButton:hover,
+#levelButton:hover,
+#shopButton:hover,
+#inventoryButton:hover,
+#stealButton:hover,
+#backRobberyButton:hover{
+    color: red;
+}
+.box:hover{
+    transform: scale(1.05);
+}
+#buyButtonEnhancedKnife:hover,
+#buyButtonKnife:hover,
+#buyButtonShoes:hover,
+#buyButtonMoreHP:hover,
+#buyButtonLockpick:hover,
+#inventorySellButtonOne:hover,
+#inventorySellButtonTwo:hover,
+#inventorySellButtonThree:hover,
+#inventorySellButtonFour:hover,
+#inventorySellButtonFive:hover,
+#inventorySellButtonSix:hover,
+#inventorySellButtonSeven:hover,
+#inventorySellButtonEight:hover,
+#inventorySellButtonNine:hover,
+#inventorySellButtonTen:hover,
+#inventorySellButtonElleven,
+#inventorySellButtonTwelen{
+    color: green;
+}
+#backButton:hover{
+    background-color: rgba(0,0,0,0.3);
 }

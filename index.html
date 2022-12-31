@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./res/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <div id="box">
-        <p id="health">20</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./res/css/style.css" />
+    <title>Car Thief</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="inventory"><p id= "inventoryButton">Invertory</p></div>
+      <div id="money">0$</div>
+      <div id="backButton"><img src="./res/img/40_436.jpg" alt=""></div>
+      <p id="sandbox">SandBox</p>
+      <h1 id="gameName">Car Thief</h1>
+      <p id="startButton" class="button">Start</p>
+      <p id="endGameNadpis"></p>
+      <p id="info"></p>
+      <div id="buttons">
+        <p id="levelButton">Level</p>
+        <p" id="shopButton">Shop</p>
+      </div>
+      <div id="levels">
+        <p style="font-size: 36px">Levels</p>
+        <div id="levelsboxes">
+        <div class="levelBox" id="levelBoxOne"><p style="font-size: 22px">Level 1</p><p style="font-size: 20px;" class="startGameButton" id="levelOne">Start</p></div>
+        <div class="levelBox" id="levelBoxTwo"><p style="font-size: 22px;">Level 2</p><p style="font-size: 20px;" class="startGameButton" id="levelTwo">Start</p></div>
+        <div class="levelBox" id="levelBoxThree"><p style="font-size: 22px">Level 3</p><p style="font-size: 20px;" class="startGameButton" id="levelThree">Start</p></div>
+        <div class="levelBox" id="levelBoxFour"><p style="font-size: 22px">Level 4</p><p style="font-size: 20px;" class="startGameButton" id="levelFour">Start</p></div>
+        <div class="levelBox" id="levelBoxFive"><p style="font-size: 22px">Level 5</p><p style="font-size: 20px;" class="startGameButton" id="levelFive">Start</p></div>
+        <div class="levelBox" id="levelBoxSix"><p style="font-size: 22px">Level 6</p><p style="font-size: 20px;" class="startGameButton" id="levelSix">Start</p></div>
+        <div class="levelBox" id="levelBoxSeven"><p style="font-size: 22px">Level 7</p><p style="font-size: 20px;" class="startGameButton" id="levelSeven">Start</p></div>
+        <div class="levelBox" id="levelBoxEight"><p style="font-size: 22px">Level 8</p><p style="font-size: 20px;" class="startGameButton" id="levelEight">Start</p></div>
+        </div>
+      </div>
+      <div id="shop">
+        <p style="font-size: 32px">Shop</p>
+        <div id="levelboxes">
+          <div id="temporarly">
+            <div class="box" id="shopKnife"><p style="font-size: 18px">Knife<br>- 50$</p><p id="buyButtonKnife">Buy</p></div>
+            <div class="box" id="shopEnhancedKnife"><p style="font-size: 18px">Enhanced Knife<br>- 200$</p><p id="buyButtonEnhancedKnife">Buy</p></div>
+          </div>
+          <div id="normal">
+            <div class="box" id="shopBetterShoes"><p style="font-size: 18px">Better Shoes<br>- 10$</p><p id="buyButtonShoes">Buy</p></div>
+            <div class="box" id="shopMoreHP"><p style="font-size: 18px">More HP<br>- 25$</p><p id="buyButtonMoreHP">Buy</p></div>
+            <div class="box" id="shopLockpick"><p style="font-size: 18px">Lockpick<br>- 10$</p><p id="buyButtonLockpick">Buy</p></div>
+          </div>
+          <div class="box" style = "display: none;"><p style="font-size: 18px">Order</p></div>
+          <div class="box" style = "display: none;"><p style="font-size: 18px">Order</p></div>
+          <div class="box" style = "display: none;"><p style="font-size: 18px">Order</p></div>
+        </div>
+      </div>
+      <div id="inventoryBar">
+        <p style="font-size: 32px; margin:10px;">Inventory</p>
+        <div id="levelboxes">
+          <div id="inventoryBoxes">
+        <div class="inventoryBox" id="itemBoxOne"><p style="font-size: 18px" id="itemOne"></p><p id="inventorySellButtonOne">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxTwo"><p style="font-size: 18px" id="itemTwo"></p><p id="inventorySellButtonTwo">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxThree"><p style="font-size: 18px" id="itemThree"></p><p id="inventorySellButtonThree">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxFour"><p style="font-size: 18px" id="itemFour"></p><p id="inventorySellButtonFour">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxFive"><p style="font-size: 18px" id="itemFive"></p><p id="inventorySellButtonFive">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxSix"><p style="font-size: 18px" id="itemSix"></p><p id="inventorySellButtonSix">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxSeven"><p style="font-size: 18px" id="itemSeven"></p><p id="inventorySellButtonSeven">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxEight"><p style="font-size: 18px;" id="itemEight"></p><p id="inventorySellButtonEight">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxNine"><p style="font-size: 18px;" id="itemNine"></p><p id="inventorySellButtonNine">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxTen"><p style="font-size: 18px;" id="itemTen"></p><p id="inventorySellButtonTen">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxElleven"><p style="font-size: 18px;" id="itemElleven"></p><p id="inventorySellButtonElleven">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxTwelve"><p style="font-size: 18px;" id="itemTwelve"></p><p id="inventorySellButtonTwelve">Sell</p></div>
+        <div class="inventoryBox" id="itemBoxThirdteen"><p style="font-size: 18px;" id="itemThirdteen"></p><p id="inventorySellButtonThirdteen">Sell</p></div>
+          </div>
+        <p id="inventoryNoItems"></p>
+        </div>
+      </div>
+      <div id="robResults">
+        <p id="failLevelResult">Succes<br>Your recieved:</p>
+        <p id="robberyRecieveOne"></p>
+        <p id="robberyRecieveTwo"></p>
+        <p id="robberyRecieveThree"></p>
+        <p id="backRobberyButton">Back</p></div>
+      <div id="thief"><p id="stealProgress"></p><img src="./res/img/thief.webp" alt=""><p style="margin:0" id="thiefHealth">Health: 100</p></div>
+      <div id="car"><p id="stealButton">Vykrast</p><img src="./res/img/carOne.jpg" alt="" id="carImage"></div>
+      <div id="enemy"><img src="" alt="" id="enemyImage"><p id="enemyHealth">Health: 100</p></div>
     </div>
-    <div id="enemy">
-        <p id="healthTwo">20</p>
-    </div>
-    <button id="button">Send</button>
-    <p id="info"></p>
     <script src="./res/js/code.js"></script>
-</body>
+  </body>
 </html>
