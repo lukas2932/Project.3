@@ -385,7 +385,7 @@ function BattleLevelFive(){
       thiefAttackAnimationAfter();
 
       robResult();
-      robberyRecieveOne.innerHTML = "Your recieved an item4";
+      robberyRecieveOne.innerHTML = "Your recieved an item5";
       itemBoxSeven.style.display = "block";
       itemSeven.innerHTML = "Item5";
       inventorySellButtonSeven.innerHTML = "Sell (300$)";
@@ -425,7 +425,7 @@ function BattleLevelSix(){
       thiefAttackAnimationAfter();
 
       robResult();
-      robberyRecieveOne.innerHTML = "Your recieved an item4";
+      robberyRecieveOne.innerHTML = "Your recieved an item6";
       itemBoxNine.style.display = "block";
       itemNine.innerHTML = "Item6";
       inventorySellButtonNine.innerHTML = "Sell (400$)";
@@ -465,7 +465,7 @@ function BattleLevelSeven(){
       thiefAttackAnimationAfter();
 
       robResult();
-      robberyRecieveOne.innerHTML = "Your recieved an item4";
+      robberyRecieveOne.innerHTML = "Your recieved an item7";
       itemBoxTen.style.display = "block";
       itemTen.innerHTML = "Item7";
       inventorySellButtonTen.innerHTML = "Sell (500$)";

@@ -440,8 +440,8 @@ body{
 #inventorySellButtonEight:hover,
 #inventorySellButtonNine:hover,
 #inventorySellButtonTen:hover,
-#inventorySellButtonElleven,
-#inventorySellButtonTwelen{
+#inventorySellButtonElleven:hover,
+#inventorySellButtonTwelve{
     color: green;
     transform: scale(1.05);
 }
