@@ -7,7 +7,7 @@
 html,
 body{
     margin: 0;
-    background: url("/res/img/background.jpg");
+    background: url(../img/background.jpg);
     background-size: cover;
 }
 #main{
