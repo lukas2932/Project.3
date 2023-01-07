@@ -624,6 +624,7 @@ levelOne.onclick = () => {
   levels.style.display = "none";
   thief.style.display = "block";
   car.style.display = "flex";
+  carImage.src = "./res/img/carOne.jpg";
   levelBoxOne.style.display = "none";
   levelBoxTwo.style.color = "black";
   thiefHealth.style.display = "none";
