@@ -682,7 +682,7 @@ levelOne.onclick = () => {
       levelBoxTwo.style.display = "none";
       levelBoxThree.style.color = "black";
       shopEnhancedKnife.style.display = "none";
-      carImage.src = "/res/img/carTwo.jpg";
+      carImage.src = "../res/img/carTwo.jpg";
       thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
       setTimeout(stealButtonAppear, thiefSpeedStealButton);
       
