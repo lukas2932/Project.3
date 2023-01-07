@@ -626,7 +626,6 @@ levelOne.onclick = () => {
   car.style.display = "flex";
   levelBoxOne.style.display = "none";
   levelBoxTwo.style.color = "black";
-  carImage.src = "/res/img/carOne.jpg";
   thiefHealth.style.display = "none";
   thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
   info.innerHTML = "";
@@ -682,7 +681,7 @@ levelOne.onclick = () => {
       levelBoxTwo.style.display = "none";
       levelBoxThree.style.color = "black";
       shopEnhancedKnife.style.display = "none";
-      carImage.src = "../res/img/carTwo.jpg";
+      carImage.src = "./res/img/carTwo.jpg";
       thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
       setTimeout(stealButtonAppear, thiefSpeedStealButton);
       
