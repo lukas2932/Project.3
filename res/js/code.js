@@ -624,7 +624,7 @@ levelOne.onclick = () => {
   levels.style.display = "none";
   thief.style.display = "block";
   car.style.display = "flex";
-  carImage.src = "./res/img/carOne.JPG";
+  carImage.src = "./res/img/carOne.jpg";
   levelBoxOne.style.display = "none";
   levelBoxTwo.style.color = "black";
   thiefHealth.style.display = "none";
@@ -682,7 +682,7 @@ levelOne.onclick = () => {
       levelBoxTwo.style.display = "none";
       levelBoxThree.style.color = "black";
       shopEnhancedKnife.style.display = "none";
-      carImage.src = "./res/img/carTwo.JPG";
+      carImage.src = "./res/img/carTwo.jpg";
       thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
       setTimeout(stealButtonAppear, thiefSpeedStealButton);
       
@@ -740,7 +740,7 @@ levelOne.onclick = () => {
           levelBoxThree.style.display = "none";
           levelBoxFour.style.color = "black";
           shopEnhancedKnife.style.display = "none";
-          carImage.src = "./res/img/carThree.JPG";
+          carImage.src = "./res/img/carThree.jpg";
           thief.style.left = "1.3%";
           thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
           thiefHealth.style.display = "none";
@@ -798,7 +798,7 @@ levelOne.onclick = () => {
             levelBoxFour.style.display = "none";
             levelBoxFive.style.color = "black";
             shopEnhancedKnife.style.display = "none";
-            carImage.src = "./res/img/carFour.JPG";
+            carImage.src = "./res/img/carFour.jpg";
             thief.style.left = "1.3%";
             thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
             thiefHealth.style.display = "none";
@@ -856,7 +856,7 @@ levelOne.onclick = () => {
               levelBoxFive.style.display = "none";
               levelBoxSix.style.color = "black";
               shopEnhancedKnife.style.display = "none";
-              carImage.src = "./res/img/carFive.JPG";
+              carImage.src = "./res/img/carFive.jpg";
               thief.style.left = "1.3%";
               thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
               thiefHealth.style.display = "none";
@@ -915,7 +915,7 @@ levelOne.onclick = () => {
                 levelBoxSix.style.display = "none";
                 levelBoxSeven.style.color = "black";
                 shopEnhancedKnife.style.display = "none";
-                carImage.src = "./res/img/carSix.PNG";
+                carImage.src = "./res/img/carSix.png";
                 thief.style.left = "1.3%";
                 thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
                 thiefHealth.style.display = "none";
@@ -974,7 +974,7 @@ levelOne.onclick = () => {
                   levelBoxSeven.style.display = "none";
                   levelBoxEight.style.color = "black";
                   shopEnhancedKnife.style.display = "none";
-                  carImage.src = "./res/img/carSeven.JPG";
+                  carImage.src = "./res/img/carSeven.jpg";
                   thief.style.left = "1.3%";
                   thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
                   thiefHealth.style.display = "none";
@@ -1033,7 +1033,7 @@ levelOne.onclick = () => {
                     levelBoxSeven.style.display = "none";
                     levelBoxEight.style.color = "black";
                     shopEnhancedKnife.style.display = "none";
-                    carImage.src = "./res/img/carEight.JPG";
+                    carImage.src = "./res/img/carEight.jpg";
                     thief.style.left = "1.3%";
                     thief.style.animation = `${"thief-animation " + thiefSpeed + "s linear forwards"}`;
                     thiefHealth.style.display = "none";
