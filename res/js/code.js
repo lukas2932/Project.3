@@ -154,7 +154,7 @@ function enemyAppear() {
   thief.style.left = "15%";
   enemy.style.display = "block";
   stealProgress.style.display = "none";
-  enemyImage.src = "/res/img/ownerOne.png";
+  enemyImage.src = "./res/img/ownerOne.png";
   thiefHealth.style.display = "block";
 }
 
