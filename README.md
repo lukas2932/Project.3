@@ -1,2 +1,2 @@
-# Project.3
-[live](https://lukas2932.github.io/Project.3/)
+# Car Thief
+[View](https://lukas2932.github.io/Project.3/)
