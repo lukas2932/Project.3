@@ -1157,12 +1157,12 @@ buyButtonMoreHP.onclick = () => {
   }
   if (moneyPro >= 25) {
     moneyPro -= 25;
-    info.innerHTML = "You bought a More HP";
     setTimeout(infoShopBackup, 1000);
     money.innerHTML = moneyPro + "$";
     thiefHealthBoost += 10;
     thiefHealthPro = (100 + thiefHealthBoost);
     thiefHealth.innerHTML = "Health: " + thiefHealthPro;
+    info.innerHTML = "You bought a More HP ( Health: " + thiefHealthPro + " )";
   }
 }
 
